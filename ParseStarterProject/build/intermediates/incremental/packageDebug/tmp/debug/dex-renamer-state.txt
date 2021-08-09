@@ -1,0 +1,10 @@
+#Fri Aug 06 17:28:39 IST 2021
+base.2=D\:\\dominiCodes\\Projects\\Parse-Server-Starter-Project-20210710T175010Z-001\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes2.dex
+path.2=classes2.dex
+base.1=D\:\\dominiCodes\\Projects\\Parse-Server-Starter-Project-20210710T175010Z-001\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+path.1=classes.dex
+base.0=D\:\\dominiCodes\\Projects\\Parse-Server-Starter-Project-20210710T175010Z-001\\Parse-Server-Starter-Project\\ParseStarterProject\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

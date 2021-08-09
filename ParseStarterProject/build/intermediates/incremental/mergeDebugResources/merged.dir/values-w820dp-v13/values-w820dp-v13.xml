@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <string name="very_severely_underweight_16_0"><![CDATA[Very Severely Underweight <16.0]]></string>
+</resources>

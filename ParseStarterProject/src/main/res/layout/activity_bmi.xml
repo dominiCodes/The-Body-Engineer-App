@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newlbb"
+    tools:context=".bmiActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="423dp"
+        android:layout_height="55dp"
+        android:background="@drawable/newbb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI Calculator"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backImageView"
+            android:layout_width="46dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/refreshImageView"
+            android:layout_width="50dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_undo" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/body_mass_index_bmi_is_a_value_derived_from_the_mass_weight_and_height_of_a_person_the_bmi_is_defined_as_the_body_mass_divided_by_the_square_of_the_body_height_and_is_universally_expressed_in_units_of_kg_m2_resulting_from_mass_in_kilograms_and_height_in_metres_n_nthe_bmi_is_a_convenient_rule_of_thumb_used_to_broadly_categorize_a_person_as_underweight_normal_weight_overweight_or_obese_based_on_tissue_mass_muscle_fat_and_bone_and_height_commonly_accepted_bmi_ranges_are_underweight_under_18_5_kg_m2_normal_weight_18_5_to_25_overweight_25_to_30_and_obese_over_30"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="@id/saveDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="15dp" />
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="114dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="112dp"
+                android:onClick="calculateBmiClicked"
+                android:padding="10dp"
+                android:text="Calculate BMI"
+                android:textSize="15sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/heightEditTextCC"
+                android:layout_width="130dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="5dp"
+                android:ems="10"
+                android:hint="Your height"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/wieghtEditText"
+                android:layout_width="130dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:ems="10"
+                android:hint="Your weight"
+                android:inputType="textPersonName"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="352dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:onClick="nextClick"
+                android:text="@string/want_a_diet_or_workout_plan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="380dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/newlbb"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.548"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/textcategory1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:text="@string/very_severely_underweight_16_0"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#ffa500"
+                    android:text="@string/severely_underweight_16_0_16_9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#fff000"
+                    android:text="@string/underweight_17_0_18_4"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/normal_18_5_24_9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#fff000"
+                    android:text="@string/overweight_25_0_29_9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#ffa500"
+                    android:text="@string/obese_class_1_30_0_34_9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:text="@string/obese_class_2_25_0_39_9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textcategory8"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@android:color/holo_red_dark"
+                    android:text="@string/obese_class_40_0"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="45dp"
+                android:text="kgs"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/wieghtEditText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="33dp"
+                android:text="cms"
+                android:textColor="@color/wallet_primary_text_holo_light"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="415dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/newbb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/calculateButton">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="Your BMI"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/bmiResultTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView13"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/bmiCategoryeditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/bmiResultTextView"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/saveDataTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Save Data?"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="20sp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextButton" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="409dp"
+                android:layout_height="424dp"
+                android:layout_marginTop="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="411dp"
+                android:layout_height="536dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31"
+                app:srcCompat="@drawable/bmiadd" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

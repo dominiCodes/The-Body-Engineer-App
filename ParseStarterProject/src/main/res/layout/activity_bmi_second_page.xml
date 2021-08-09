@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bmiSecondPage">
+
+    <Button
+        android:id="@+id/dietButton"
+        android:layout_width="312dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="120dp"
+        android:onClick="dietClick"
+        android:text="Diet Planner"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/workoutButton"
+        android:layout_width="312dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="85dp"
+        android:onClick="workoutClick"
+        android:text="Workout Planner"
+        android:textSize="25sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietInfo" />
+
+    <TextView
+        android:id="@+id/dietInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="*Diet will be according to your BMI value"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietButton" />
+
+    <TextView
+        android:id="@+id/workoutInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="*Workout plan will be according to your \n weight category"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workoutButton" />
+
+    <Button
+        android:id="@+id/gymWorkoutButton"
+        android:layout_width="320dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="60dp"
+        android:onClick="gymWorloutClick"
+        android:text="Gym Workout"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workoutPreference" />
+
+    <TextView
+        android:id="@+id/workoutPreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="What kind of workout you would like??"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/orTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="OR"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gymWorkoutButton" />
+
+    <Button
+        android:id="@+id/homeWorkoutButton"
+        android:layout_width="320dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="50dp"
+        android:onClick="homeWorkoutClcik"
+        android:text="Home Workout"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+    <TextView
+        android:id="@+id/dietPreference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="What kind of diet will you prefer?"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vegDietButton"
+        android:layout_width="320dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="60dp"
+        android:onClick="vegDietClick"
+        android:text="Vegeterian"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workoutPreference" />
+
+    <Button
+        android:id="@+id/nonVegDietButton"
+        android:layout_width="320dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="50dp"
+        android:onClick="nonVegClcik"
+        android:text="Non - Vegeterian"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+    <Button
+        android:id="@+id/dietBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="73dp"
+        android:onClick="dietBackClick"
+        android:text="Back"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nonVegDietButton" />
+
+    <Button
+        android:id="@+id/workoutBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="73dp"
+        android:onClick="workoutBackClick"
+        android:text="Back"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nonVegDietButton" />
+</android.support.constraint.ConstraintLayout>
